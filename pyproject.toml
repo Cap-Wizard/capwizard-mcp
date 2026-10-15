@@ -1,24 +1,19 @@
 [project]
 name = "capwizard"
 version = "0.1.0"
-description = "Auto-generate CapCut drafts (vertical 9:16) from videos: silence-cut + subtitles + optional script-driven cuts."
+description = "CapWizard engine: builds CapCut drafts from raw videos (transcription, AI edit, template-cloned subtitles). Basis for the CapWizard MCP server."
 requires-python = ">=3.10"
 dependencies = [
     "faster-whisper>=1.0.0",
     "rapidfuzz>=3.6.0",
     "click>=8.1.0",
-    "fastapi>=0.110.0",
-    "uvicorn[standard]>=0.29.0",
 ]
 
 [project.optional-dependencies]
 ai = ["anthropic>=0.39.0"]
-gui = ["customtkinter>=5.2.0"]
 
 [project.scripts]
 capwizard = "capwizard.cli:main"
-capwizard-gui = "capwizard.gui:main"
-capwizard-server = "capwizard.server:run"
 
 [build-system]
 requires = ["setuptools>=68"]

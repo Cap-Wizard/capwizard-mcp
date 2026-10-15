@@ -5,20 +5,7 @@ __pycache__/
 *.egg-info/
 build/
 dist/
-!desktop/build/
-
-# Electron / Node
-desktop/node_modules/
-desktop/dist/
-
-# PyInstaller sidecar build output
-backend-build/
-*.spec
-
-# Cloud backend
-cloud/.venv/
-cloud/.env
-cloud/*.db
 
 # OS
 .DS_Store
+.claude/settings.local.json
